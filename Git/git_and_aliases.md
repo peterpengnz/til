@@ -16,6 +16,7 @@ g config --global alias.co checkout
 g config --global alias.ci commit
 g config --global alias.st status
 g config --global alias.br branch
+g config --global alias.ap 'add -p'
 g config --global alias.hist 'log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 ```
 
