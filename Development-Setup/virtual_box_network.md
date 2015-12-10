@@ -17,25 +17,25 @@ Virtual Box Network Setup
 4. start virtual machine.
   Open file `/etc/network/interfaces`
   Change it to:
-```
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
+  ```
+  # This file describes the network interfaces available on your system
+  # and how to activate them. For more information, see interfaces(5).
 
-# The loopback network interface
-auto lo
-iface lo inet loopback
+  # The loopback network interface
+  auto lo
+  iface lo inet loopback
 
-# The primary network: local virtualbox network
-auto eth0
-iface eth0 inet static
-address 192.168.56.10
-network 192.168.56.0
-netmask 255.255.255.0
+  # The primary network: local virtualbox network
+  auto eth0
+  iface eth0 inet static
+  address 192.168.56.10
+  network 192.168.56.0
+  netmask 255.255.255.0
 
-# The secondary network interface (NAT)
-auto eth1
-iface eth1 inet dhcp
-```
+  # The secondary network interface (NAT)
+  auto eth1
+  iface eth1 inet dhcp
+  ```
 
 5. Reboot VM and from your laptop you can ping 192.168.56.10
 Repeat above step: 3 ~ 5 for other VMs.
